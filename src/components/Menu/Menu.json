@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Пицца плюс",
+    "image": "image1"
+  },
+  {
+    "id": 2,
+    "name": "Тануки",
+    "image": "image2"
+  },
+  {
+    "id": 3,
+    "name": "FoodBand",
+    "image": "image3"
+  },
+  {
+    "id": 4,
+    "name": "Жадина-пицца",
+    "image": "image4"
+  },
+  {
+    "id": 5,
+    "name": "Точка еды",
+    "image": "image5"
+  },
+  {
+    "id": 6,
+    "name": "PizzaBurger",
+    "image": "image6"
+  }
+]
