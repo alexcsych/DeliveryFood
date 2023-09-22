@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './Menu.module.sass'
-import menuData from './Menu.json'
+import menuData from '../../Menu.json'
 import MenuItem from '../MenuItem'
 
 function Menu () {
@@ -19,7 +19,12 @@ function Menu () {
       </div>
       <div className={styles.Menu}>
         {menuData.map(menu => (
-          <MenuItem key={menu.id} menuName={menu.name} image={menu.image} />
+          <MenuItem
+            key={menu.id}
+            foodId={menu.id}
+            menuName={menu.name}
+            image={menu.image}
+          />
         ))}
       </div>
     </>

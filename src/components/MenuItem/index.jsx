@@ -1,11 +1,12 @@
 import React from 'react'
 import styles from './MenuItem.module.sass'
+import { Link } from 'react-router-dom'
 
-function MenuItem ({ menuName, image }) {
+function MenuItem ({ foodId, menuName, image }) {
   const imagePath = `/images/${image}.png`
 
   return (
-    <div className={styles.MenuItem}>
+    <Link to={`/restaurant?foodId=${foodId}`} className={styles.MenuItem}>
       <img src={imagePath} alt={image} className={styles.MenuImg} />
       <div className={styles.MenuItemContent}>
         <div className={styles.MenuName}>
@@ -28,7 +29,7 @@ function MenuItem ({ menuName, image }) {
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   )
 }
 
