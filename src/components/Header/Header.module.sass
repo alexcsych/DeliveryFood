@@ -1,45 +1,54 @@
 .Header
   display: flex
   align-items: center
-  justify-content: space-between
+  justify-content: flex-end
   margin-top: 44px 
   gap: 10px
+  @media (max-width: 768px)
+    flex-wrap: wrap
 
-  .Logo 
+  .AdaptiveHeader
     display: flex
-    flex-direction: row
+    justify-content: space-between
     align-items: center
-
-    .img 
-      max-width: 32px
-      max-height: 32px
-      margin-right: 10px
-
-    .p 
-      font-size: 16px
-      color: black
-      font-weight: 400
-      margin: 0
-
-    .div 
-      display: flex
-      flex-direction: column
-      align-items: flex-start
-
-  .SearchContainer
-    display: flex
-    align-items: center
-    gap: 4px
-    border: 1px solid lightgrey
-    border-radius: 3px 
-    padding: 8px 10px
+    gap: 30px
     width: 100%
-    max-width: 690px
 
-    .SearchBar
+    .Logo 
+      display: flex
+      flex-direction: row
+      align-items: center
+
+      .img 
+        max-width: 32px
+        max-height: 32px
+        margin-right: 10px
+
+      .p 
+        font-size: 16px
+        color: black
+        font-weight: 400
+        margin: 0
+
+      .div 
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+
+    .SearchContainer
+      display: flex
+      align-items: center
+      gap: 4px
+      border: 1px solid lightgrey
+      border-radius: 3px 
+      padding: 8px 10px
       width: 100%
-      max-width: 100%
-      height: 24px
+      max-width: 690px
+
+      .SearchBar
+        width: 100%
+        max-width: 100%
+        height: 24px
     
   .BtnsContainer
     display: flex

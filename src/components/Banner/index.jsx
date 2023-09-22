@@ -11,11 +11,6 @@ function Banner () {
           антисептиком
         </p>
       </div>
-      <img
-        src='/images/Banner.png'
-        alt='BannerImg'
-        className={styles.BannerImg}
-      />
     </div>
   )
 }

@@ -7,12 +7,14 @@ import Menu from '../../components/Menu'
 
 function Home () {
   return (
-    <div className={styles.Home}>
-      <Header></Header>
-      <Banner></Banner>
-      <Menu></Menu>
+    <>
+      <div className={styles.Home}>
+        <Header></Header>
+        <Banner></Banner>
+        <Menu></Menu>
+      </div>
       <Footer></Footer>
-    </div>
+    </>
   )
 }
 

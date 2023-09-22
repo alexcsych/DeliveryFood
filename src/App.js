@@ -4,7 +4,6 @@ import './index.css'
 
 import Home from './pages/Home'
 // import Restaurant from './pages/Restaurant'
-// import Cart from './pages/Cart'
 
 function App () {
   return (
@@ -16,7 +15,7 @@ function App () {
           element={<Restaurant />}
           caseSensitive={true}
         />
-        <Route path='/cart' element={<Cart />} caseSensitive={true} /> */}
+        */}
       </Routes>
     </Router>
   )

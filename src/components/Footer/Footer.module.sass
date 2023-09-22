@@ -1,39 +1,58 @@
-.Footer 
+.AdaptiveFooter
   display: flex
-  justify-content: space-between
-  margin-top: 150px
-  margin-bottom: 62px 
+  justify-content: center
+  align-items: center
+  background-color: white
+  width: 100%
+  margin-top: 75px
+  padding-top: 75px
+  padding-bottom: 62px 
 
-  .FooterContainer
+
+  .Footer 
     display: flex
-    gap: 35px
+    justify-content: space-between
+    align-items: center
+    gap: 10px 
+    width: 100% 
+    max-width: 83%
+    @media (max-width: 500px)
+      flex-direction: column
+      gap: 25px
 
-    .Logo 
+    .FooterContainer
       display: flex
-      flex-direction: row
       align-items: center
-
-      .img 
-        max-width: 32px
-        max-height: 32px
-        margin-right: 10px
-
-      .p 
-        font-size: 16px
-        color: black
-        font-weight: 400
-        margin: 0
-
-      .div 
-        display: flex
+      gap: 25px
+      @media (max-width: 500px)
         flex-direction: column
-        align-items: flex-start
 
-    .nav
+      .Logo 
+        display: flex
+        flex-direction: row
+        align-items: center
+
+        .img 
+          max-width: 32px
+          max-height: 32px
+          margin-right: 10px
+
+        .p 
+          font-size: 16px
+          color: black
+          font-weight: 400
+          margin: 0
+
+        .div 
+          display: flex
+          flex-direction: column
+          align-items: flex-start
+
+      .nav
+        display: flex
+        align-items: center
+        gap: 15px
+
+    .ContactsContainer
       display: flex
-      align-items: center
-      gap: 15px
-
-  .ContactsContainer
-    display: flex
-    gap: 21px
+      gap: 21px
