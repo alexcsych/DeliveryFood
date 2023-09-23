@@ -1,6 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styles from './Footer.module.sass'
+import Logo from '../../images/Logo.png'
+import inst from '../../images/inst.svg'
+import face from '../../images/face.svg'
 
 function Footer () {
   return (
@@ -8,11 +11,7 @@ function Footer () {
       <div className={styles.Footer}>
         <div className={styles.FooterContainer}>
           <div className={styles.Logo}>
-            <img
-              src='../../images/Logo.png'
-              alt='Logo'
-              className={styles.img}
-            />
+            <img src={Logo} alt='Logo' className={styles.img} />
             <div className={styles.div}>
               <p className={styles.p}>Delivery</p>
               <p className={styles.p}>Food</p>
@@ -24,8 +23,8 @@ function Footer () {
           </nav>
         </div>
         <div className={styles.ContactsContainer}>
-          <img src='../../images/inst.svg' alt='face' />
-          <img src='../../images/face.svg' alt='face' />
+          <img src={inst} alt='face' />
+          <img src={face} alt='face' />
         </div>
       </div>
     </div>

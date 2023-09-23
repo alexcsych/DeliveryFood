@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './Menu.module.sass'
 import MenuItem from '../MenuItem'
 import { connect } from 'react-redux'
+import Search from '../../images/Search.png'
 
 function Menu ({ menuData }) {
   return (
@@ -9,7 +10,7 @@ function Menu ({ menuData }) {
       <div className={styles.MenuHeader}>
         <h2>Рестораны</h2>
         <div className={styles.SearchContainer}>
-          <img src='../../images/Search.png' alt='Search' />
+          <img src={Search} alt='Search' />
           <input
             className={styles.SearchBar}
             type='text'

@@ -3,6 +3,7 @@ import styles from './AssortimentItem.module.sass'
 import { connect } from 'react-redux'
 import { updateMenu } from '../../store/slices/menuSlice'
 import { createCartItem } from '../../store/slices/cartSlice'
+import CartWhite from './../../images/CartWhite.png'
 
 function AssortimentItem ({
   menuName,
@@ -16,11 +17,9 @@ function AssortimentItem ({
   menuData,
   create
 }) {
-  const imagePath = `../../images/${image}.png`
-
   return (
     <div className={styles.MenuItem}>
-      <img src={imagePath} alt={image} className={styles.MenuImg} />
+      <img src={image} alt='imageFood' className={styles.MenuImg} />
       <div className={styles.MenuItemContent}>
         <p className={styles.Name}>{menuName}</p>
         <p className={styles.Description}>{description}</p>
@@ -34,7 +33,7 @@ function AssortimentItem ({
             className={styles.BTNCart}
           >
             <p>До кошику</p>
-            <img src='../../images/CartWhite.png' alt='Кошик' />
+            <img src={CartWhite} alt='Кошик' />
           </button>
           <p className={styles.Price}>{price} грн</p>
         </div>

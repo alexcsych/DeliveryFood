@@ -1,4 +1,16 @@
 import { createSlice } from '@reduxjs/toolkit'
+import image1 from './../../images/image1.png'
+import image2 from './../../images/image2.png'
+import image3 from './../../images/image3.png'
+import image4 from './../../images/image4.png'
+import image5 from './../../images/image5.png'
+import image6 from './../../images/image6.png'
+import imageAssortiment1 from './../../images/imageAssortiment1.png'
+import imageAssortiment2 from './../../images/imageAssortiment2.png'
+import imageAssortiment3 from './../../images/imageAssortiment3.png'
+import imageAssortiment4 from './../../images/imageAssortiment4.png'
+import imageAssortiment5 from './../../images/imageAssortiment5.png'
+import imageAssortiment6 from './../../images/imageAssortiment6.png'
 
 const menuSlice = createSlice({
   name: 'menu',
@@ -7,12 +19,12 @@ const menuSlice = createSlice({
       {
         id: 0,
         name: 'Пицца плюс',
-        image: 'image1',
+        image: image1,
         assortiment: [
           {
             id: 0,
             name: 'Ролл угорь стандарт',
-            image: 'imageAssortiment1',
+            image: imageAssortiment1,
             description: 'Рис, угорь, соус унаги, кунжут, водоросли нори.',
             disabled: false,
             price: 250
@@ -20,7 +32,7 @@ const menuSlice = createSlice({
           {
             id: 1,
             name: 'Калифорния лосось стандарт',
-            image: 'imageAssortiment2',
+            image: imageAssortiment2,
             description:
               'Рис, лосось, авокадо, огурец, майонез, икра масаго, водоросли нори.',
             disabled: false,
@@ -29,7 +41,7 @@ const menuSlice = createSlice({
           {
             id: 2,
             name: 'Окинава стандарт',
-            image: 'imageAssortiment3',
+            image: imageAssortiment3,
             description:
               ' Рис, креветка отварная, сыр сливочный, лосось, огурец свежий...',
             disabled: false,
@@ -38,7 +50,7 @@ const menuSlice = createSlice({
           {
             id: 3,
             name: 'Цезарь маки хl',
-            image: 'imageAssortiment4',
+            image: imageAssortiment4,
             description:
               'Рис, куриная грудка копченая, икра масаго, томат, айсберг, соус цезарь...',
             disabled: false,
@@ -47,7 +59,7 @@ const menuSlice = createSlice({
           {
             id: 4,
             name: 'Ясай маки стандарт 185 г',
-            image: 'imageAssortiment5',
+            image: imageAssortiment5,
             description:
               'Рис, помидор свежий, перец болгарский, авокадо, огурец, айсберг',
             disabled: false,
@@ -56,7 +68,7 @@ const menuSlice = createSlice({
           {
             id: 5,
             name: 'Ролл с креветкой стандарт',
-            image: 'imageAssortiment6',
+            image: imageAssortiment6,
             description:
               'Рис, водоросли нори, креветки отварные, сыр сливочный, огурцы',
             disabled: false,
@@ -67,12 +79,12 @@ const menuSlice = createSlice({
       {
         id: 1,
         name: 'Тануки',
-        image: 'image2',
+        image: image2,
         assortiment: [
           {
             id: 0,
             name: 'Ролл угорь стандарт',
-            image: 'imageAssortiment1',
+            image: imageAssortiment1,
             description: 'Рис, угорь, соус унаги, кунжут, водоросли нори.',
             disabled: false,
             price: 250
@@ -80,7 +92,7 @@ const menuSlice = createSlice({
           {
             id: 1,
             name: 'Калифорния лосось стандарт',
-            image: 'imageAssortiment2',
+            image: imageAssortiment2,
             description:
               'Рис, лосось, авокадо, огурец, майонез, икра масаго, водоросли нори.',
             disabled: false,
@@ -89,7 +101,7 @@ const menuSlice = createSlice({
           {
             id: 2,
             name: 'Окинава стандарт',
-            image: 'imageAssortiment3',
+            image: imageAssortiment3,
             description:
               ' Рис, креветка отварная, сыр сливочный, лосось, огурец свежий...',
             disabled: false,
@@ -98,7 +110,7 @@ const menuSlice = createSlice({
           {
             id: 3,
             name: 'Цезарь маки хl',
-            image: 'imageAssortiment4',
+            image: imageAssortiment4,
             description:
               'Рис, куриная грудка копченая, икра масаго, томат, айсберг, соус цезарь...',
             disabled: false,
@@ -107,7 +119,7 @@ const menuSlice = createSlice({
           {
             id: 4,
             name: 'Ясай маки стандарт 185 г',
-            image: 'imageAssortiment5',
+            image: imageAssortiment5,
             description:
               'Рис, помидор свежий, перец болгарский, авокадо, огурец, айсберг',
             disabled: false,
@@ -116,7 +128,7 @@ const menuSlice = createSlice({
           {
             id: 5,
             name: 'Ролл с креветкой стандарт',
-            image: 'imageAssortiment6',
+            image: imageAssortiment6,
             description:
               'Рис, водоросли нори, креветки отварные, сыр сливочный, огурцы',
             disabled: false,
@@ -127,12 +139,12 @@ const menuSlice = createSlice({
       {
         id: 2,
         name: 'FoodBand',
-        image: 'image3',
+        image: image3,
         assortiment: [
           {
             id: 0,
             name: 'Ролл угорь стандарт',
-            image: 'imageAssortiment1',
+            image: imageAssortiment1,
             description: 'Рис, угорь, соус унаги, кунжут, водоросли нори.',
             disabled: false,
             price: 250
@@ -140,7 +152,7 @@ const menuSlice = createSlice({
           {
             id: 1,
             name: 'Калифорния лосось стандарт',
-            image: 'imageAssortiment2',
+            image: imageAssortiment2,
             description:
               'Рис, лосось, авокадо, огурец, майонез, икра масаго, водоросли нори.',
             disabled: false,
@@ -149,7 +161,7 @@ const menuSlice = createSlice({
           {
             id: 2,
             name: 'Окинава стандарт',
-            image: 'imageAssortiment3',
+            image: imageAssortiment3,
             description:
               ' Рис, креветка отварная, сыр сливочный, лосось, огурец свежий...',
             disabled: false,
@@ -158,7 +170,7 @@ const menuSlice = createSlice({
           {
             id: 3,
             name: 'Цезарь маки хl',
-            image: 'imageAssortiment4',
+            image: imageAssortiment4,
             description:
               'Рис, куриная грудка копченая, икра масаго, томат, айсберг, соус цезарь...',
             disabled: false,
@@ -167,7 +179,7 @@ const menuSlice = createSlice({
           {
             id: 4,
             name: 'Ясай маки стандарт 185 г',
-            image: 'imageAssortiment5',
+            image: imageAssortiment5,
             description:
               'Рис, помидор свежий, перец болгарский, авокадо, огурец, айсберг',
             disabled: false,
@@ -176,7 +188,7 @@ const menuSlice = createSlice({
           {
             id: 5,
             name: 'Ролл с креветкой стандарт',
-            image: 'imageAssortiment6',
+            image: imageAssortiment6,
             description:
               'Рис, водоросли нори, креветки отварные, сыр сливочный, огурцы',
             disabled: false,
@@ -187,12 +199,12 @@ const menuSlice = createSlice({
       {
         id: 3,
         name: 'Жадина-пицца',
-        image: 'image4',
+        image: image4,
         assortiment: [
           {
             id: 0,
             name: 'Ролл угорь стандарт',
-            image: 'imageAssortiment1',
+            image: imageAssortiment1,
             description: 'Рис, угорь, соус унаги, кунжут, водоросли нори.',
             disabled: false,
             price: 250
@@ -200,7 +212,7 @@ const menuSlice = createSlice({
           {
             id: 1,
             name: 'Калифорния лосось стандарт',
-            image: 'imageAssortiment2',
+            image: imageAssortiment2,
             description:
               'Рис, лосось, авокадо, огурец, майонез, икра масаго, водоросли нори.',
             disabled: false,
@@ -209,7 +221,7 @@ const menuSlice = createSlice({
           {
             id: 2,
             name: 'Окинава стандарт',
-            image: 'imageAssortiment3',
+            image: imageAssortiment3,
             description:
               ' Рис, креветка отварная, сыр сливочный, лосось, огурец свежий...',
             disabled: false,
@@ -218,7 +230,7 @@ const menuSlice = createSlice({
           {
             id: 3,
             name: 'Цезарь маки хl',
-            image: 'imageAssortiment4',
+            image: imageAssortiment4,
             description:
               'Рис, куриная грудка копченая, икра масаго, томат, айсберг, соус цезарь...',
             disabled: false,
@@ -227,7 +239,7 @@ const menuSlice = createSlice({
           {
             id: 4,
             name: 'Ясай маки стандарт 185 г',
-            image: 'imageAssortiment5',
+            image: imageAssortiment5,
             description:
               'Рис, помидор свежий, перец болгарский, авокадо, огурец, айсберг',
             disabled: false,
@@ -236,7 +248,7 @@ const menuSlice = createSlice({
           {
             id: 5,
             name: 'Ролл с креветкой стандарт',
-            image: 'imageAssortiment6',
+            image: imageAssortiment6,
             description:
               'Рис, водоросли нори, креветки отварные, сыр сливочный, огурцы',
             disabled: false,
@@ -247,12 +259,12 @@ const menuSlice = createSlice({
       {
         id: 4,
         name: 'Точка еды',
-        image: 'image5',
+        image: image5,
         assortiment: [
           {
             id: 0,
             name: 'Ролл угорь стандарт',
-            image: 'imageAssortiment1',
+            image: imageAssortiment1,
             description: 'Рис, угорь, соус унаги, кунжут, водоросли нори.',
             disabled: false,
             price: 250
@@ -260,7 +272,7 @@ const menuSlice = createSlice({
           {
             id: 1,
             name: 'Калифорния лосось стандарт',
-            image: 'imageAssortiment2',
+            image: imageAssortiment2,
             description:
               'Рис, лосось, авокадо, огурец, майонез, икра масаго, водоросли нори.',
             disabled: false,
@@ -269,7 +281,7 @@ const menuSlice = createSlice({
           {
             id: 2,
             name: 'Окинава стандарт',
-            image: 'imageAssortiment3',
+            image: imageAssortiment3,
             description:
               ' Рис, креветка отварная, сыр сливочный, лосось, огурец свежий...',
             disabled: false,
@@ -278,7 +290,7 @@ const menuSlice = createSlice({
           {
             id: 3,
             name: 'Цезарь маки хl',
-            image: 'imageAssortiment4',
+            image: imageAssortiment4,
             description:
               'Рис, куриная грудка копченая, икра масаго, томат, айсберг, соус цезарь...',
             disabled: false,
@@ -287,7 +299,7 @@ const menuSlice = createSlice({
           {
             id: 4,
             name: 'Ясай маки стандарт 185 г',
-            image: 'imageAssortiment5',
+            image: imageAssortiment5,
             description:
               'Рис, помидор свежий, перец болгарский, авокадо, огурец, айсберг',
             disabled: false,
@@ -296,7 +308,7 @@ const menuSlice = createSlice({
           {
             id: 5,
             name: 'Ролл с креветкой стандарт',
-            image: 'imageAssortiment6',
+            image: imageAssortiment6,
             description:
               'Рис, водоросли нори, креветки отварные, сыр сливочный, огурцы',
             disabled: false,
@@ -307,12 +319,12 @@ const menuSlice = createSlice({
       {
         id: 5,
         name: 'PizzaBurger',
-        image: 'image6',
+        image: image6,
         assortiment: [
           {
             id: 0,
             name: 'Ролл угорь стандарт',
-            image: 'imageAssortiment1',
+            image: imageAssortiment1,
             description: 'Рис, угорь, соус унаги, кунжут, водоросли нори.',
             disabled: false,
             price: 250
@@ -320,7 +332,7 @@ const menuSlice = createSlice({
           {
             id: 1,
             name: 'Калифорния лосось стандарт',
-            image: 'imageAssortiment2',
+            image: imageAssortiment2,
             description:
               'Рис, лосось, авокадо, огурец, майонез, икра масаго, водоросли нори.',
             disabled: false,
@@ -329,7 +341,7 @@ const menuSlice = createSlice({
           {
             id: 2,
             name: 'Окинава стандарт',
-            image: 'imageAssortiment3',
+            image: imageAssortiment3,
             description:
               ' Рис, креветка отварная, сыр сливочный, лосось, огурец свежий...',
             disabled: false,
@@ -338,7 +350,7 @@ const menuSlice = createSlice({
           {
             id: 3,
             name: 'Цезарь маки хl',
-            image: 'imageAssortiment4',
+            image: imageAssortiment4,
             description:
               'Рис, куриная грудка копченая, икра масаго, томат, айсберг, соус цезарь...',
             disabled: false,
@@ -347,7 +359,7 @@ const menuSlice = createSlice({
           {
             id: 4,
             name: 'Ясай маки стандарт 185 г',
-            image: 'imageAssortiment5',
+            image: imageAssortiment5,
             description:
               'Рис, помидор свежий, перец болгарский, авокадо, огурец, айсберг',
             disabled: false,
@@ -356,7 +368,7 @@ const menuSlice = createSlice({
           {
             id: 5,
             name: 'Ролл с креветкой стандарт',
-            image: 'imageAssortiment6',
+            image: imageAssortiment6,
             description:
               'Рис, водоросли нори, креветки отварные, сыр сливочный, огурцы',
             disabled: false,
