@@ -1,9 +1,9 @@
 import React from 'react'
 import styles from './Menu.module.sass'
-import menuData from '../../Menu.json'
 import MenuItem from '../MenuItem'
+import { connect } from 'react-redux'
 
-function Menu () {
+function Menu ({ menuData }) {
   return (
     <>
       <div className={styles.MenuHeader}>
@@ -31,4 +31,6 @@ function Menu () {
   )
 }
 
-export default Menu
+const mapStateToProps = state => state.menuData
+
+export default connect(mapStateToProps)(Menu)

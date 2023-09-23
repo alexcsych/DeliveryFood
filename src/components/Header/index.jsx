@@ -1,7 +1,9 @@
 import React from 'react'
 import styles from './Header.module.sass'
+import { showCart } from '../../store/slices/cartSlice'
+import { connect } from 'react-redux'
 
-function Header () {
+function Header ({ show }) {
   return (
     <div className={styles.Header}>
       <div className={styles.AdaptiveHeader}>
@@ -26,7 +28,12 @@ function Header () {
           <img src='/images/User.png' alt='User' />
           <p>Войти</p>
         </button>
-        <button className={styles.BtnCart}>
+        <button
+          onClick={() => {
+            show()
+          }}
+          className={styles.BtnCart}
+        >
           <img src='/images/Cart.png' alt='Cart' />
           <p>Корзина</p>
         </button>
@@ -34,5 +41,12 @@ function Header () {
     </div>
   )
 }
+const mapStateToProps = state => state.cartData
 
-export default Header
+const mapDispatchToProps = dispatch => ({
+  show: () => {
+    dispatch(showCart())
+  }
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header)

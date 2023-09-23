@@ -16,7 +16,7 @@ function Footer () {
           </div>
           <nav className={styles.nav}>
             <Link to='/'>Home</Link>
-            <Link to='/restaurant'>Restaurant</Link>
+            <Link to='/restaurant?foodId=0'>Restaurant</Link>
           </nav>
         </div>
         <div className={styles.ContactsContainer}>

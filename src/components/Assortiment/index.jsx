@@ -1,10 +1,10 @@
 import React from 'react'
 import styles from './Assortiment.module.sass'
-import menuData from '../../Menu.json'
 import { useLocation } from 'react-router-dom'
 import AssortimentItem from './../AssortimentItem'
+import { connect } from 'react-redux'
 
-function Assortiment () {
+function Assortiment ({ menuData }) {
   const location = useLocation()
   const searchParams = new URLSearchParams(location.search)
   const foodId = searchParams.get('foodId')
@@ -33,7 +33,10 @@ function Assortiment () {
             menuName={menu.name}
             image={menu.image}
             description={menu.description}
+            disabled={menu.disabled}
             price={menu.price}
+            id={menu.id}
+            foodId={foodId}
           />
         ))}
       </div>
@@ -41,4 +44,6 @@ function Assortiment () {
   )
 }
 
-export default Assortiment
+const mapStateToProps = state => state.menuData
+
+export default connect(mapStateToProps)(Assortiment)
