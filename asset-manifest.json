@@ -1,14 +1,28 @@
 {
   "files": {
     "main.css": "/DeliveryFood/static/css/main.ea89e03a.css",
-    "main.js": "/DeliveryFood/static/js/main.f9178195.js",
+    "main.js": "/DeliveryFood/static/js/main.59dd5fe1.js",
     "static/media/Banner.png": "/DeliveryFood/static/media/Banner.0ca717b70152405a8352.png",
+    "static/media/image6.png": "/DeliveryFood/static/media/image6.2666a33f267c566795ce.png",
+    "static/media/image3.png": "/DeliveryFood/static/media/image3.e2a0e740523e4230051d.png",
+    "static/media/image4.png": "/DeliveryFood/static/media/image4.4489a3e4049a5de0b4fc.png",
+    "static/media/image2.png": "/DeliveryFood/static/media/image2.e99c39badc9facfa7f1f.png",
+    "static/media/image5.png": "/DeliveryFood/static/media/image5.fb07c435229fdc48b283.png",
+    "static/media/image1.png": "/DeliveryFood/static/media/image1.ad1435fff94debacfce7.png",
+    "static/media/imageAssortiment6.png": "/DeliveryFood/static/media/imageAssortiment6.b2fcf70f21104eb9c4a0.png",
+    "static/media/imageAssortiment5.png": "/DeliveryFood/static/media/imageAssortiment5.e84dc02a7c6061268ed4.png",
+    "static/media/imageAssortiment4.png": "/DeliveryFood/static/media/imageAssortiment4.feb32b1524ea63a26bb9.png",
+    "static/media/imageAssortiment3.png": "/DeliveryFood/static/media/imageAssortiment3.8a13c2c42898ff816aa9.png",
+    "static/media/imageAssortiment2.png": "/DeliveryFood/static/media/imageAssortiment2.fecf47485502972c4f98.png",
+    "static/media/imageAssortiment1.png": "/DeliveryFood/static/media/imageAssortiment1.7f91d56bb51f6fd0a3c4.png",
+    "static/media/inst.svg": "/DeliveryFood/static/media/inst.35282cdfb2bf80bee78d5ba272786b8f.svg",
     "index.html": "/DeliveryFood/index.html",
+    "static/media/face.svg": "/DeliveryFood/static/media/face.bc9f2eedc73f4f7f20414953e6295139.svg",
     "main.ea89e03a.css.map": "/DeliveryFood/static/css/main.ea89e03a.css.map",
-    "main.f9178195.js.map": "/DeliveryFood/static/js/main.f9178195.js.map"
+    "main.59dd5fe1.js.map": "/DeliveryFood/static/js/main.59dd5fe1.js.map"
   },
   "entrypoints": [
     "static/css/main.ea89e03a.css",
-    "static/js/main.f9178195.js"
+    "static/js/main.59dd5fe1.js"
   ]
 }
