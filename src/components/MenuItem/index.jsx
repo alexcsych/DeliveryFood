@@ -7,7 +7,7 @@ function MenuItem ({ foodId, menuName, image }) {
 
   return (
     <Link
-      to={`/DeliveryFood/restaurant?foodId=${foodId}`}
+      to={`/Delivery_Food/restaurant?foodId=${foodId}`}
       className={styles.MenuItem}
     >
       <img src={imagePath} alt={image} className={styles.MenuImg} />

@@ -19,8 +19,8 @@ function Footer () {
             </div>
           </div>
           <nav className={styles.nav}>
-            <Link to='/DeliveryFood'>Home</Link>
-            <Link to='/DeliveryFood/restaurant?foodId=0'>Restaurant</Link>
+            <Link to='/Delivery_Food'>Home</Link>
+            <Link to='/Delivery_Food/restaurant?foodId=0'>Restaurant</Link>
           </nav>
         </div>
         <div className={styles.ContactsContainer}>
