@@ -16,7 +16,7 @@ function AssortimentItem ({
   menuData,
   create
 }) {
-  const imagePath = `/images/${image}.png`
+  const imagePath = `../../images/${image}.png`
 
   return (
     <div className={styles.MenuItem}>
@@ -34,7 +34,7 @@ function AssortimentItem ({
             className={styles.BTNCart}
           >
             <p>До кошику</p>
-            <img src='/images/CartWhite.png' alt='Кошик' />
+            <img src='../../images/CartWhite.png' alt='Кошик' />
           </button>
           <p className={styles.Price}>{price} грн</p>
         </div>

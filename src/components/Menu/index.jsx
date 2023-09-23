@@ -9,7 +9,7 @@ function Menu ({ menuData }) {
       <div className={styles.MenuHeader}>
         <h2>Рестораны</h2>
         <div className={styles.SearchContainer}>
-          <img src='/images/Search.png' alt='Search' />
+          <img src='../../images/Search.png' alt='Search' />
           <input
             className={styles.SearchBar}
             type='text'

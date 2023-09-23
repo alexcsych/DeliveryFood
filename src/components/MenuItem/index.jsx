@@ -3,10 +3,13 @@ import styles from './MenuItem.module.sass'
 import { Link } from 'react-router-dom'
 
 function MenuItem ({ foodId, menuName, image }) {
-  const imagePath = `/images/${image}.png`
+  const imagePath = `../../images/${image}.png`
 
   return (
-    <Link to={`/restaurant?foodId=${foodId}`} className={styles.MenuItem}>
+    <Link
+      to={`/DeliveryFood/restaurant?foodId=${foodId}`}
+      className={styles.MenuItem}
+    >
       <img src={imagePath} alt={image} className={styles.MenuImg} />
       <div className={styles.MenuItemContent}>
         <div className={styles.MenuName}>
@@ -15,13 +18,17 @@ function MenuItem ({ foodId, menuName, image }) {
         </div>
         <div className={styles.MenuAbout}>
           <div className={styles.MenuRating}>
-            <img src='/images/Star.png' alt='Star' className={styles.Star} />
+            <img
+              src='../../images/Star.png'
+              alt='Star'
+              className={styles.Star}
+            />
             <p className={styles.Rating}>4.5</p>
           </div>
           <div className={styles.MenuPrice}>
             <p>От 900 грн</p>
             <img
-              src='/images/Ellipse.png'
+              src='../../images/Ellipse.png'
               alt='Ellipse'
               className={styles.Ellipse}
             />

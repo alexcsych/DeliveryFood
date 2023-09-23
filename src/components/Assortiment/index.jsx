@@ -13,13 +13,13 @@ function Assortiment ({ menuData }) {
       <div className={styles.MenuHeader}>
         <h1>{menuData[foodId].name}</h1>
         <div className={styles.MenuRating}>
-          <img src='/images/Star.png' alt='Star' className={styles.Star} />
+          <img src='../../images/Star.png' alt='Star' className={styles.Star} />
           <p className={styles.Rating}>4.5</p>
         </div>
         <div className={styles.MenuPrice}>
           <p>От 900 грн</p>
           <img
-            src='/images/Ellipse.png'
+            src='../../images/Ellipse.png'
             alt='Ellipse'
             className={styles.Ellipse}
           />

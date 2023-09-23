@@ -8,20 +8,24 @@ function Footer () {
       <div className={styles.Footer}>
         <div className={styles.FooterContainer}>
           <div className={styles.Logo}>
-            <img src='/images/Logo.png' alt='Logo' className={styles.img} />
+            <img
+              src='../../images/Logo.png'
+              alt='Logo'
+              className={styles.img}
+            />
             <div className={styles.div}>
               <p className={styles.p}>Delivery</p>
               <p className={styles.p}>Food</p>
             </div>
           </div>
           <nav className={styles.nav}>
-            <Link to='/'>Home</Link>
-            <Link to='/restaurant?foodId=0'>Restaurant</Link>
+            <Link to='/DeliveryFood'>Home</Link>
+            <Link to='/DeliveryFood/restaurant?foodId=0'>Restaurant</Link>
           </nav>
         </div>
         <div className={styles.ContactsContainer}>
-          <img src='/images/inst.svg' alt='face' />
-          <img src='/images/face.svg' alt='face' />
+          <img src='../../images/inst.svg' alt='face' />
+          <img src='../../images/face.svg' alt='face' />
         </div>
       </div>
     </div>

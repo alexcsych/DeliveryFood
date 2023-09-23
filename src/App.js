@@ -8,9 +8,9 @@ function App () {
   return (
     <Router>
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/DeliveryFood' element={<Home />} />
         <Route
-          path='/restaurant'
+          path='/DeliveryFood/restaurant'
           element={<Restaurant />}
           caseSensitive={true}
         />
