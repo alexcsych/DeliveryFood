@@ -4,6 +4,8 @@
   justify-content: flex-end
   margin-top: 44px 
   gap: 10px
+  animation: slideIn 0.5s ease forwards
+
   @media (max-width: 768px)
     flex-wrap: wrap
 
@@ -73,3 +75,17 @@
       align-items: center
       gap: 4px
       border-radius: 4px 
+    
+    .BtnLogIn:hover 
+      background-color: #0078d4
+      transition: background-color 0.3s ease
+    
+    .BtnCart:hover 
+      background-color: #d4d4d4
+      transition: background-color 0.3s ease
+
+@keyframes slideIn
+  from
+    transform: translateX(-100%)
+  to 
+    transform: translateX(0)
