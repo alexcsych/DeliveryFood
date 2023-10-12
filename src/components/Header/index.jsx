@@ -12,6 +12,7 @@ function Header ({ showCart, showAuth, username }) {
   const handleLoginClick = () => {
     if (username) {
       localStorage.removeItem('username')
+      localStorage.removeItem('password')
       showAuth()
     } else {
       showAuth()
