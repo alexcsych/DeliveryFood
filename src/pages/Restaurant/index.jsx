@@ -4,10 +4,12 @@ import Header from '../../components/Header'
 import Assortiment from '../../components/Assortiment'
 import Footer from '../../components/Footer'
 import Cart from '../../components/Cart'
+import Auth from '../../components/Auth'
 
 function Restaurant () {
   return (
     <>
+      <Auth></Auth>
       <Cart></Cart>
       <div className={styles.Restaurant}>
         <Header></Header>
