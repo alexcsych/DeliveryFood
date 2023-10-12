@@ -1,13 +1,23 @@
 import React from 'react'
 import styles from './Header.module.sass'
 import { showCart } from '../../store/slices/cartSlice'
+import { showAuth } from '../../store/slices/authSlice'
 import { connect } from 'react-redux'
 import Logo from '../../images/Logo.png'
 import Home from '../../images/Home.png'
 import User from '../../images/User.png'
 import Cart from '../../images/Cart.png'
 
-function Header ({ show }) {
+function Header ({ showCart, showAuth, username }) {
+  const handleLoginClick = () => {
+    if (username) {
+      localStorage.removeItem('username')
+      showAuth()
+    } else {
+      showAuth()
+    }
+  }
+
   return (
     <div className={styles.Header}>
       <div className={styles.AdaptiveHeader}>
@@ -28,13 +38,14 @@ function Header ({ show }) {
         </div>
       </div>
       <div className={styles.BtnsContainer}>
-        <button className={styles.BtnLogIn}>
+        <p className={styles.userName}>{username && `Hi ${username}!`}</p>
+        <button className={styles.BtnLogIn} onClick={handleLoginClick}>
           <img src={User} alt='User' />
-          <p>Войти</p>
+          <p>{username ? 'Выйти' : 'Войти'}</p>
         </button>
         <button
           onClick={() => {
-            show()
+            showCart()
           }}
           className={styles.BtnCart}
         >
@@ -45,11 +56,20 @@ function Header ({ show }) {
     </div>
   )
 }
-const mapStateToProps = state => state.cartData
+
+const mapStateToProps = state => {
+  const username = localStorage.getItem('username')
+  return {
+    username
+  }
+}
 
 const mapDispatchToProps = dispatch => ({
-  show: () => {
+  showCart: () => {
     dispatch(showCart())
+  },
+  showAuth: () => {
+    dispatch(showAuth())
   }
 })
 
