@@ -48,31 +48,43 @@ function Auth ({ hide, authData }) {
             validationSchema={validationSchema}
             onSubmit={handleSubmit}
           >
-            <Form>
-              <div className={styles.fieldBox}>
-                <div className={styles.field}>
-                  <label htmlFor='username'>Имя:</label>
-                  <Field type='text' id='username' name='username' />
+            {({ errors, touched }) => (
+              <Form>
+                <div className={styles.fieldBox}>
+                  <div className={styles.field}>
+                    <label htmlFor='username'>Имя:</label>
+                    <Field
+                      type='text'
+                      id='username'
+                      name='username'
+                      className={`${errors.username ? `${styles.error}` : ''}`}
+                    />
+                  </div>
+                  <ErrorMessage
+                    name='username'
+                    component='div'
+                    className={styles.errorMessage}
+                  />
                 </div>
-                <ErrorMessage
-                  name='username'
-                  component='div'
-                  className={styles.errorMessage}
-                />
-              </div>
-              <div className={styles.fieldBox}>
-                <div className={styles.field}>
-                  <label htmlFor='password'>Пароль:</label>
-                  <Field type='password' id='password' name='password' />
+                <div className={styles.fieldBox}>
+                  <div className={styles.field}>
+                    <label htmlFor='password'>Пароль:</label>
+                    <Field
+                      type='password'
+                      id='password'
+                      name='password'
+                      className={`${errors.password ? `${styles.error}` : ''}`}
+                    />
+                  </div>
+                  <ErrorMessage
+                    name='password'
+                    component='div'
+                    className={styles.errorMessage}
+                  />
                 </div>
-                <ErrorMessage
-                  name='password'
-                  component='div'
-                  className={styles.errorMessage}
-                />
-              </div>
-              <button type='submit'>Сохранить</button>
-            </Form>
+                <button type='submit'>Сохранить</button>
+              </Form>
+            )}
           </Formik>
         </div>
       </>
