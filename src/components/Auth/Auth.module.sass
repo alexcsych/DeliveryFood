@@ -5,7 +5,7 @@
   width: 100%
   height: 100%
   background: rgba(0, 0, 0, 0.5)
-  z-index: 1
+  z-index: 1000
 
 .modal 
   position: fixed
@@ -14,29 +14,37 @@
   transform: translate(-50%, -50%)
   background: #fff
   padding: 20px
+  max-width: 300px
+  width: 100%
   border-radius: 5px
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3)
-  z-index: 2
+  z-index: 1001
 
   form 
     display: flex
     flex-direction: column
     align-items: center
 
-  .field
-    width: 100%
+  .fieldBox
     display: flex
-    justify-content: space-between
-    gap: 10px
+    flex-direction: column
+    width: 100%
+    padding-bottom: 10px
 
-    label 
-      margin-bottom: 5px
+    .field
+      width: 100%
+      display: flex
+      justify-content: space-between
+      gap: 10px
 
-    input 
-      padding: 5px
-      margin-bottom: 10px
-      border: 1px solid #ccc
-      border-radius: 3px
+      label 
+        margin-bottom: 5px
+
+      input 
+        padding: 5px
+        margin-bottom: 10px
+        border: 1px solid #ccc
+        border-radius: 3px
 
   button 
     background-color: #007bff
@@ -49,3 +57,10 @@
   button:hover 
     background-color: #0056b3
 
+.error 
+  border: 1px solid red
+
+.errorMessage 
+  color: red
+  font-size: 14px
+  text-align: end
