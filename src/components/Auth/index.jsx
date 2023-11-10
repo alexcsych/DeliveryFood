@@ -3,10 +3,14 @@ import styles from './Auth.module.sass'
 import { Formik, Field, Form, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
 import { connect } from 'react-redux'
-import { hideAuth } from '../../store/slices/authSlice'
+import {
+  hideAuth,
+  setLogin,
+  setLocalStorageData
+} from '../../store/slices/authSlice'
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
 
-function Auth ({ hide, authData }) {
+function Auth ({ hide, authData, setLogin, setLocalStorageData }) {
   const initialValues = {
     username: '',
     password: ''
@@ -23,13 +27,6 @@ function Auth ({ hide, authData }) {
       .min(6, 'Пароль должен содержать как минимум 6 символов')
   })
 
-  const handleSubmit = (values, { resetForm }) => {
-    localStorage.setItem('username', values.username)
-    localStorage.setItem('password', values.password)
-    resetForm()
-    hide()
-  }
-
   useEffect(() => {
     if (authData.isVisible) {
       disableBodyScroll(document.body)
@@ -37,6 +34,18 @@ function Auth ({ hide, authData }) {
       enableBodyScroll(document.body)
     }
   }, [authData.isVisible])
+
+  const handleSubmit = (values, { resetForm }) => {
+    setLogin(true)
+    setLocalStorageData({
+      username: values.username,
+      password: values.password
+    })
+    localStorage.setItem('username', values.username)
+    localStorage.setItem('password', values.password)
+    resetForm()
+    hide()
+  }
 
   return (
     authData.isVisible && (
@@ -99,6 +108,12 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   hide: () => {
     dispatch(hideAuth())
+  },
+  setLocalStorageData: data => {
+    dispatch(setLocalStorageData(data))
+  },
+  setLogin: data => {
+    dispatch(setLogin(data))
   }
 })
 

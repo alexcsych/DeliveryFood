@@ -1,19 +1,46 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styles from './Header.module.sass'
 import { showCart } from '../../store/slices/cartSlice'
-import { showAuth } from '../../store/slices/authSlice'
+import {
+  showAuth,
+  setLogin,
+  setLocalStorageData
+} from '../../store/slices/authSlice'
 import { connect } from 'react-redux'
 import Logo from '../../images/Logo.png'
 import Home from '../../images/Home.png'
 import User from '../../images/User.png'
 import Cart from '../../images/Cart.png'
+import { Navigate } from 'react-router-dom'
 
-function Header ({ showCart, showAuth, username }) {
+function Header ({
+  showCart,
+  showAuth,
+  setLogin,
+  authData,
+  setLocalStorageData
+}) {
+  useEffect(() => {
+    const localStorageName = localStorage.getItem('username')
+    const localStoragePassword = localStorage.getItem('password')
+    if (localStorageName !== null && localStoragePassword !== null) {
+      setLogin(true)
+      setLocalStorageData({
+        username: localStorageName,
+        password: localStoragePassword
+      })
+    } else {
+      setLogin(false)
+    }
+  }, [])
+
   const handleLoginClick = () => {
-    if (username) {
+    if (authData.isLogin) {
+      setLogin(false)
       localStorage.removeItem('username')
       localStorage.removeItem('password')
       showAuth()
+      return <Navigate to='/DeliveryFood' />
     } else {
       showAuth()
     }
@@ -39,10 +66,12 @@ function Header ({ showCart, showAuth, username }) {
         </div>
       </div>
       <div className={styles.BtnsContainer}>
-        <p className={styles.userName}>{username && `Hi ${username}!`}</p>
+        <p className={styles.userName}>
+          {authData.isLogin && `Hi ${authData.userData.username}!`}
+        </p>
         <button className={styles.BtnLogIn} onClick={handleLoginClick}>
           <img src={User} alt='User' />
-          <p>{username ? 'Выйти' : 'Войти'}</p>
+          <p>{authData.isLogin ? 'Выйти' : 'Войти'}</p>
         </button>
         <button
           onClick={() => {
@@ -59,9 +88,8 @@ function Header ({ showCart, showAuth, username }) {
 }
 
 const mapStateToProps = state => {
-  const username = localStorage.getItem('username')
   return {
-    username
+    authData: state.authData
   }
 }
 
@@ -71,6 +99,12 @@ const mapDispatchToProps = dispatch => ({
   },
   showAuth: () => {
     dispatch(showAuth())
+  },
+  setLogin: data => {
+    dispatch(setLogin(data))
+  },
+  setLocalStorageData: data => {
+    dispatch(setLocalStorageData(data))
   }
 })
 

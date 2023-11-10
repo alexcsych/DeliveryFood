@@ -1,5 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import PrivateRoute from './PriveteRoute'
 import './index.css'
 import Home from './pages/Home'
 import Restaurant from './pages/Restaurant'
@@ -11,8 +12,11 @@ function App () {
         <Route path='/DeliveryFood' element={<Home />} />
         <Route
           path='/DeliveryFood/restaurant'
-          element={<Restaurant />}
-          caseSensitive={true}
+          element={
+            <PrivateRoute>
+              <Restaurant />
+            </PrivateRoute>
+          }
         />
       </Routes>
     </Router>
