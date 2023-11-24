@@ -32,7 +32,7 @@ function Header ({
     } else {
       setLogin(false)
     }
-  }, [])
+  }, [setLocalStorageData, setLogin])
 
   const handleLoginClick = () => {
     if (authData.isLogin) {

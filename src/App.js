@@ -1,11 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import PrivateRoute from './PriveteRoute'
+import { useDispatch } from 'react-redux'
+import { fetchMenuData } from './store/slices/menuSlice'
 import './index.css'
 import Home from './pages/Home'
 import Restaurant from './pages/Restaurant'
 
 function App () {
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(fetchMenuData())
+  }, [dispatch])
+
   return (
     <Router>
       <Routes>
