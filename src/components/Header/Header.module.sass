@@ -46,12 +46,30 @@
       padding: 8px 10px
       width: 100%
       max-width: 690px
+      position: relative
+      z-index: 400
 
       .SearchBar
         width: 100%
         max-width: 100%
+        font-weight: 500
         height: 24px
-    
+      
+      .RestaurantList 
+        position: absolute
+        top: 100%
+        left: 0
+        z-index: 401
+        background-color: white
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+        border: 1px solid #ddd
+        width: 100%
+
+        .MenuItemLabel
+          padding: 10px
+          font-weight: 500
+          z-index: 402
+
   .BtnsContainer
     display: flex
     gap: 10px

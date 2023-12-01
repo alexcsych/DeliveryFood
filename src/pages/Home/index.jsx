@@ -13,8 +13,8 @@ function Home () {
       <Auth></Auth>
       <Cart></Cart>
       <div className={styles.Home}>
-        <Header></Header>
         <Banner></Banner>
+        <Header></Header>
         <Menu></Menu>
       </div>
       <Footer></Footer>

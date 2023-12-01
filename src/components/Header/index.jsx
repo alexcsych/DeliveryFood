@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './Header.module.sass'
 import { showCart } from '../../store/slices/cartSlice'
 import {
@@ -11,15 +11,18 @@ import Logo from '../../images/Logo.png'
 import Home from '../../images/Home.png'
 import User from '../../images/User.png'
 import Cart from '../../images/Cart.png'
-import { Navigate } from 'react-router-dom'
+import { Link, Navigate } from 'react-router-dom'
 
 function Header ({
   showCart,
   showAuth,
   setLogin,
+  menuData,
   authData,
   setLocalStorageData
 }) {
+  const [searchValue, setSearchValue] = useState('')
+  const [focusValue, setFocusValue] = useState(false)
   useEffect(() => {
     const localStorageName = localStorage.getItem('username')
     const localStoragePassword = localStorage.getItem('password')
@@ -33,6 +36,28 @@ function Header ({
       setLogin(false)
     }
   }, [setLocalStorageData, setLogin])
+
+  const filteredRestaurants =
+    searchValue !== ''
+      ? menuData.filter(restaurant =>
+          restaurant.name.toLowerCase().includes(searchValue.toLowerCase())
+        )
+      : ''
+
+  const handleInputChange = e => {
+    setSearchValue(e.target.value)
+  }
+
+  const handleInputFocus = () => {
+    setFocusValue(true)
+  }
+
+  const handleInputBlur = e => {
+    // e.preventDefault()
+    if (!e.currentTarget.contains(e.relatedTarget)) {
+      setFocusValue(false)
+    }
+  }
 
   const handleLoginClick = () => {
     if (authData.isLogin) {
@@ -56,13 +81,30 @@ function Header ({
             <p className={styles.p}>Food</p>
           </div>
         </div>
-        <div className={styles.SearchContainer}>
+        <div className={styles.SearchContainer} onBlur={handleInputBlur}>
           <img src={Home} alt='Home' />
           <input
             className={styles.SearchBar}
             type='text'
             placeholder='Адрес доставки'
+            value={searchValue}
+            onChange={handleInputChange}
+            onFocus={handleInputFocus}
           />
+          {filteredRestaurants !== '' && focusValue && (
+            <div className={styles.RestaurantList}>
+              {filteredRestaurants.map(restaurant => (
+                <Link
+                  to={`/DeliveryFood/restaurant?foodId=${restaurant.id}`}
+                  className={styles.MenuItem}
+                >
+                  <div key={restaurant.id} className={styles.MenuItemLabel}>
+                    {restaurant.name}
+                  </div>
+                </Link>
+              ))}
+            </div>
+          )}
         </div>
       </div>
       <div className={styles.BtnsContainer}>
@@ -89,6 +131,7 @@ function Header ({
 
 const mapStateToProps = state => {
   return {
+    menuData: state.menuData.menuData,
     authData: state.authData
   }
 }
