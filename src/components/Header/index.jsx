@@ -60,14 +60,24 @@ function Header ({
   }
 
   const handleLoginClick = () => {
-    if (authData.isLogin) {
-      setLogin(false)
-      localStorage.removeItem('username')
-      localStorage.removeItem('password')
-      showAuth()
-      return <Navigate to='/DeliveryFood' />
-    } else {
-      showAuth()
+    switch (authData.isLogin) {
+      case true:
+        setLogin(false)
+        localStorage.removeItem('username')
+        localStorage.removeItem('password')
+        showAuth()
+        return <Navigate to='/DeliveryFood' />
+      default:
+        showAuth()
+    }
+  }
+
+  const btn = () => {
+    switch (authData.isLogin) {
+      case true:
+        return 'Выйти'
+      default:
+        return 'Войти'
     }
   }
 
@@ -113,7 +123,7 @@ function Header ({
         </p>
         <button className={styles.BtnLogIn} onClick={handleLoginClick}>
           <img src={User} alt='User' />
-          <p>{authData.isLogin ? 'Выйти' : 'Войти'}</p>
+          <p>{btn()}</p>
         </button>
         <button
           onClick={() => {
