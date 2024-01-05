@@ -5,7 +5,7 @@ export const fetchMenuData = createAsyncThunk(
   'menu/fetchMenuData',
   async () => {
     try {
-      const response = await axios.get('/DeliveryFood/db/menuData.json')
+      const response = await axios.get('http://localhost:5000/delivery')
       return response.data
     } catch (error) {
       throw error

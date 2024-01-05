@@ -1,0 +1,401 @@
+const mongoose = require('mongoose')
+const Schema = mongoose.Schema
+
+const restaurantSchema = new Schema({
+  id: Number,
+  name: String,
+  image: String,
+  assortiment: [
+    {
+      id: Number,
+      name: String,
+      image: String,
+      description: String,
+      disabled: Boolean,
+      price: Number
+    }
+  ]
+})
+
+const Menu = mongoose.model('Menu', restaurantSchema)
+
+const menuData = [
+  {
+    id: 0,
+    name: 'Пицца плюс',
+    image: '/DeliveryFood/images/image1.png',
+    assortiment: [
+      {
+        id: 0,
+        name: 'Ролл угорь стандарт',
+        image: '/DeliveryFood/images/imageAssortiment1.png',
+        description: 'Рис, угорь, соус унаги, кунжут, водоросли нори.',
+        disabled: false,
+        price: 250
+      },
+      {
+        id: 1,
+        name: 'Калифорния лосось стандарт',
+        image: '/DeliveryFood/images/imageAssortiment2.png',
+        description:
+          'Рис, лосось, авокадо, огурец, майонез, икра масаго, водоросли нори.',
+        disabled: false,
+        price: 395
+      },
+      {
+        id: 2,
+        name: 'Окинава стандарт',
+        image: '/DeliveryFood/images/imageAssortiment3.png',
+        description:
+          ' Рис, креветка отварная, сыр сливочный, лосось, огурец свежий...',
+        disabled: false,
+        price: 250
+      },
+      {
+        id: 3,
+        name: 'Цезарь маки хl',
+        image: '/DeliveryFood/images/imageAssortiment4.png',
+        description:
+          'Рис, куриная грудка копченая, икра масаго, томат, айсберг, соус цезарь...',
+        disabled: false,
+        price: 250
+      },
+      {
+        id: 4,
+        name: 'Ясай маки стандарт 185 г',
+        image: '/DeliveryFood/images/imageAssortiment5.png',
+        description:
+          'Рис, помидор свежий, перец болгарский, авокадо, огурец, айсберг',
+        disabled: false,
+        price: 250
+      },
+      {
+        id: 5,
+        name: 'Ролл с креветкой стандарт',
+        image: '/DeliveryFood/images/imageAssortiment6.png',
+        description:
+          'Рис, водоросли нори, креветки отварные, сыр сливочный, огурцы',
+        disabled: false,
+        price: 250
+      }
+    ]
+  },
+  {
+    id: 1,
+    name: 'Тануки',
+    image: '/DeliveryFood/images/image2.png',
+    assortiment: [
+      {
+        id: 0,
+        name: 'Ролл угорь стандарт',
+        image: '/DeliveryFood/images/imageAssortiment1.png',
+        description: 'Рис, угорь, соус унаги, кунжут, водоросли нори.',
+        disabled: false,
+        price: 250
+      },
+      {
+        id: 1,
+        name: 'Калифорния лосось стандарт',
+        image: '/DeliveryFood/images/imageAssortiment2.png',
+        description:
+          'Рис, лосось, авокадо, огурец, майонез, икра масаго, водоросли нори.',
+        disabled: false,
+        price: 395
+      },
+      {
+        id: 2,
+        name: 'Окинава стандарт',
+        image: '/DeliveryFood/images/imageAssortiment3.png',
+        description:
+          ' Рис, креветка отварная, сыр сливочный, лосось, огурец свежий...',
+        disabled: false,
+        price: 250
+      },
+      {
+        id: 3,
+        name: 'Цезарь маки хl',
+        image: '/DeliveryFood/images/imageAssortiment4.png',
+        description:
+          'Рис, куриная грудка копченая, икра масаго, томат, айсберг, соус цезарь...',
+        disabled: false,
+        price: 250
+      },
+      {
+        id: 4,
+        name: 'Ясай маки стандарт 185 г',
+        image: '/DeliveryFood/images/imageAssortiment5.png',
+        description:
+          'Рис, помидор свежий, перец болгарский, авокадо, огурец, айсберг',
+        disabled: false,
+        price: 250
+      },
+      {
+        id: 5,
+        name: 'Ролл с креветкой стандарт',
+        image: '/DeliveryFood/images/imageAssortiment6.png',
+        description:
+          'Рис, водоросли нори, креветки отварные, сыр сливочный, огурцы',
+        disabled: false,
+        price: 250
+      }
+    ]
+  },
+  {
+    id: 2,
+    name: 'FoodBand',
+    image: '/DeliveryFood/images/image3.png',
+    assortiment: [
+      {
+        id: 0,
+        name: 'Ролл угорь стандарт',
+        image: '/DeliveryFood/images/imageAssortiment1.png',
+        description: 'Рис, угорь, соус унаги, кунжут, водоросли нори.',
+        disabled: false,
+        price: 250
+      },
+      {
+        id: 1,
+        name: 'Калифорния лосось стандарт',
+        image: '/DeliveryFood/images/imageAssortiment2.png',
+        description:
+          'Рис, лосось, авокадо, огурец, майонез, икра масаго, водоросли нори.',
+        disabled: false,
+        price: 395
+      },
+      {
+        id: 2,
+        name: 'Окинава стандарт',
+        image: '/DeliveryFood/images/imageAssortiment3.png',
+        description:
+          ' Рис, креветка отварная, сыр сливочный, лосось, огурец свежий...',
+        disabled: false,
+        price: 250
+      },
+      {
+        id: 3,
+        name: 'Цезарь маки хl',
+        image: '/DeliveryFood/images/imageAssortiment4.png',
+        description:
+          'Рис, куриная грудка копченая, икра масаго, томат, айсберг, соус цезарь...',
+        disabled: false,
+        price: 250
+      },
+      {
+        id: 4,
+        name: 'Ясай маки стандарт 185 г',
+        image: '/DeliveryFood/images/imageAssortiment5.png',
+        description:
+          'Рис, помидор свежий, перец болгарский, авокадо, огурец, айсберг',
+        disabled: false,
+        price: 250
+      },
+      {
+        id: 5,
+        name: 'Ролл с креветкой стандарт',
+        image: '/DeliveryFood/images/imageAssortiment6.png',
+        description:
+          'Рис, водоросли нори, креветки отварные, сыр сливочный, огурцы',
+        disabled: false,
+        price: 250
+      }
+    ]
+  },
+  {
+    id: 3,
+    name: 'Жадина-пицца',
+    image: '/DeliveryFood/images/image4.png',
+    assortiment: [
+      {
+        id: 0,
+        name: 'Ролл угорь стандарт',
+        image: '/DeliveryFood/images/imageAssortiment1.png',
+        description: 'Рис, угорь, соус унаги, кунжут, водоросли нори.',
+        disabled: false,
+        price: 250
+      },
+      {
+        id: 1,
+        name: 'Калифорния лосось стандарт',
+        image: '/DeliveryFood/images/imageAssortiment2.png',
+        description:
+          'Рис, лосось, авокадо, огурец, майонез, икра масаго, водоросли нори.',
+        disabled: false,
+        price: 395
+      },
+      {
+        id: 2,
+        name: 'Окинава стандарт',
+        image: '/DeliveryFood/images/imageAssortiment3.png',
+        description:
+          ' Рис, креветка отварная, сыр сливочный, лосось, огурец свежий...',
+        disabled: false,
+        price: 250
+      },
+      {
+        id: 3,
+        name: 'Цезарь маки хl',
+        image: '/DeliveryFood/images/imageAssortiment4.png',
+        description:
+          'Рис, куриная грудка копченая, икра масаго, томат, айсберг, соус цезарь...',
+        disabled: false,
+        price: 250
+      },
+      {
+        id: 4,
+        name: 'Ясай маки стандарт 185 г',
+        image: '/DeliveryFood/images/imageAssortiment5.png',
+        description:
+          'Рис, помидор свежий, перец болгарский, авокадо, огурец, айсберг',
+        disabled: false,
+        price: 250
+      },
+      {
+        id: 5,
+        name: 'Ролл с креветкой стандарт',
+        image: '/DeliveryFood/images/imageAssortiment6.png',
+        description:
+          'Рис, водоросли нори, креветки отварные, сыр сливочный, огурцы',
+        disabled: false,
+        price: 250
+      }
+    ]
+  },
+  {
+    id: 4,
+    name: 'Точка еды',
+    image: '/DeliveryFood/images/image5.png',
+    assortiment: [
+      {
+        id: 0,
+        name: 'Ролл угорь стандарт',
+        image: '/DeliveryFood/images/imageAssortiment1.png',
+        description: 'Рис, угорь, соус унаги, кунжут, водоросли нори.',
+        disabled: false,
+        price: 250
+      },
+      {
+        id: 1,
+        name: 'Калифорния лосось стандарт',
+        image: '/DeliveryFood/images/imageAssortiment2.png',
+        description:
+          'Рис, лосось, авокадо, огурец, майонез, икра масаго, водоросли нори.',
+        disabled: false,
+        price: 395
+      },
+      {
+        id: 2,
+        name: 'Окинава стандарт',
+        image: '/DeliveryFood/images/imageAssortiment3.png',
+        description:
+          ' Рис, креветка отварная, сыр сливочный, лосось, огурец свежий...',
+        disabled: false,
+        price: 250
+      },
+      {
+        id: 3,
+        name: 'Цезарь маки хl',
+        image: '/DeliveryFood/images/imageAssortiment4.png',
+        description:
+          'Рис, куриная грудка копченая, икра масаго, томат, айсберг, соус цезарь...',
+        disabled: false,
+        price: 250
+      },
+      {
+        id: 4,
+        name: 'Ясай маки стандарт 185 г',
+        image: '/DeliveryFood/images/imageAssortiment5.png',
+        description:
+          'Рис, помидор свежий, перец болгарский, авокадо, огурец, айсберг',
+        disabled: false,
+        price: 250
+      },
+      {
+        id: 5,
+        name: 'Ролл с креветкой стандарт',
+        image: '/DeliveryFood/images/imageAssortiment6.png',
+        description:
+          'Рис, водоросли нори, креветки отварные, сыр сливочный, огурцы',
+        disabled: false,
+        price: 250
+      }
+    ]
+  },
+  {
+    id: 5,
+    name: 'PizzaBurger',
+    image: '/DeliveryFood/images/image6.png',
+    assortiment: [
+      {
+        id: 0,
+        name: 'Ролл угорь стандарт',
+        image: '/DeliveryFood/images/imageAssortiment1.png',
+        description: 'Рис, угорь, соус унаги, кунжут, водоросли нори.',
+        disabled: false,
+        price: 250
+      },
+      {
+        id: 1,
+        name: 'Калифорния лосось стандарт',
+        image: '/DeliveryFood/images/imageAssortiment2.png',
+        description:
+          'Рис, лосось, авокадо, огурец, майонез, икра масаго, водоросли нори.',
+        disabled: false,
+        price: 395
+      },
+      {
+        id: 2,
+        name: 'Окинава стандарт',
+        image: '/DeliveryFood/images/imageAssortiment3.png',
+        description:
+          ' Рис, креветка отварная, сыр сливочный, лосось, огурец свежий...',
+        disabled: false,
+        price: 250
+      },
+      {
+        id: 3,
+        name: 'Цезарь маки хl',
+        image: '/DeliveryFood/images/imageAssortiment4.png',
+        description:
+          'Рис, куриная грудка копченая, икра масаго, томат, айсберг, соус цезарь...',
+        disabled: false,
+        price: 250
+      },
+      {
+        id: 4,
+        name: 'Ясай маки стандарт 185 г',
+        image: '/DeliveryFood/images/imageAssortiment5.png',
+        description:
+          'Рис, помидор свежий, перец болгарский, авокадо, огурец, айсберг',
+        disabled: false,
+        price: 250
+      },
+      {
+        id: 5,
+        name: 'Ролл с креветкой стандарт',
+        image: '/DeliveryFood/images/imageAssortiment6.png',
+        description:
+          'Рис, водоросли нори, креветки отварные, сыр сливочный, огурцы',
+        disabled: false,
+        price: 250
+      }
+    ]
+  }
+]
+
+mongoose.connect('mongodb://localhost:27017/dilivery-food', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
+const db = mongoose.connection
+
+db.once('open', async () => {
+  try {
+    await Menu.create(menuData)
+
+    console.log('Data inserted successfully!')
+  } catch (error) {
+    console.error('Error inserting data:', error)
+  } finally {
+    await mongoose.connection.close()
+  }
+})
